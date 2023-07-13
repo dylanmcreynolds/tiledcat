@@ -1,0 +1,21 @@
+trees:
+  - path: /
+    tree: tiledcat.adapters.tiledcat:AsyncScicatAdapter.from_uri
+    args:
+      scicat_uri: https://dataportal.als.lbl.gov/api/v3/
+      # data_directory: ./data
+authentication:
+  allow_anonymous_access: true
+  providers:
+    - provider: scicat
+      authenticator: tiledcat.authenticator:ScicatAuthenticator
+  # providers:
+  #   - provider: toy
+  #     authenticator: tiled.authenticators:DictionaryAuthenticator
+  #     args:
+  #       users_to_passwords:
+  #         joe: abc123
+  #         dan: abc123
+  # tiled_admins:
+  #   - provider: toy
+  #     id: joe
